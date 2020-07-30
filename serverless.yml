@@ -32,6 +32,12 @@ provider:
     type: http
   environment:
     BUCKET_NAME: ${env:BUCKET_NAME}
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+       - s3:ListBucket
+       - s3:GetObject
+      Resource: arn:aws:s3:::${env:BUCKET_NAME}
 functions:
   GetApps: ${file(./lambdas/get-apps/serverless.yml)}
 layers:
