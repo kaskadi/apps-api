@@ -1,0 +1,13 @@
+handler: lambdas/get-apps/get-apps.handler
+name: get-apps
+layers:
+  - { Ref: ApiLayerLambdaLayer }
+package:
+  include:
+    - lambdas/get-apps/get-apps.js
+    - lambdas/get-apps/helpers/**
+events:
+  - http:
+      method: get
+      path: get-apps
+      cors: true
