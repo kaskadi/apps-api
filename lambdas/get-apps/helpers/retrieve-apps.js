@@ -34,6 +34,6 @@ function fetchApp (s3, bucketName) {
       Key: `${appFolderPrefix}app.json`
     }
     return s3.getObject(appParams).promise()
-      .then(data => data.Body.toString())
+      .then(data => JSON.parse(data.Body.toString()))
   }
 }
