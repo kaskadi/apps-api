@@ -9,5 +9,5 @@ package:
 events:
   - http:
       method: get
-      path: get-apps
+      path: /
       cors: true
