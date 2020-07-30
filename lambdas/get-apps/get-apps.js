@@ -1,11 +1,12 @@
+const AWS = require('aws-sdk')
+const retrieveApps = require('./helpers/retrieve-apps.js')
+
 module.exports.handler = async (event) => {
-  return {
+  const baseResponse = {
     statusCode: 200,
     headers: {
       'Access-Control-Allow-Origin': '*'
-    },
-    body: JSON.stringify({
-      message: 'Hello World!'
-    })
+    }
   }
+  return await retrieveApps(AWS, baseResponse)
 }
