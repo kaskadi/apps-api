@@ -31,15 +31,15 @@ provider:
     logical-unit: apps
     type: http
   environment:
-    BUCKET_NAME: ${env:BUCKET_NAME}
+    S3_PUBLIC_BUCKET: ${env:S3_PUBLIC_BUCKET}
   iamRoleStatements:
     - Effect: Allow
       Action:
        - s3:ListBucket
        - s3:GetObject
       Resource: 
-        - arn:aws:s3:::${env:BUCKET_NAME}
-        - arn:aws:s3:::${env:BUCKET_NAME}/*
+        - arn:aws:s3:::${env:S3_PUBLIC_BUCKET}
+        - arn:aws:s3:::${env:S3_PUBLIC_BUCKET}/*
 functions:
   GetApps: ${file(./lambdas/get-apps/serverless.yml)}
 layers:

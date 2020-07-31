@@ -2,7 +2,7 @@ const processRes = require('./process-response.js')
 const processErr = require('./process-error.js')
 
 module.exports = async (AWS, baseResponse) => {
-  const bucketName = process.env.BUCKET_NAME
+  const bucketName = process.env.S3_PUBLIC_BUCKET
   const s3 = new AWS.S3({
     region: 'eu-central-1',
     apiVersion: '2006-03-01'
