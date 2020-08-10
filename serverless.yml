@@ -44,5 +44,3 @@ functions:
   GetApps: ${file(./lambdas/get-apps/serverless.yml)}
 layers:
   ApiLayer: ${file(./layer/serverless.yml)}
-
-# testing sls action
