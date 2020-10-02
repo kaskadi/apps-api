@@ -77,7 +77,7 @@ No description found for this layer.
 
 ### Dependencies
 
-No NPM packages or local utilities found for this layer.
+- `aws-sdk`, version: `^2.765.0` ([see on NPM](https://www.npmjs.com/package/aws-sdk))
 
 See [configuration file](./serverless.yml) for more details.
 
