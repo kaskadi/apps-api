@@ -37,7 +37,7 @@ Supported methods:
 
 **Description:**
 
-lists all applications available for the Kaskadi project
+This endpoint lists all applications available for the Kaskadi project.
 
 **Query string parameters:**
 
