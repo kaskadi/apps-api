@@ -95,9 +95,9 @@ If the custom domain you wish to use hasn't been created yet (list of custom dom
 # API endpoints
 
 The following endpoints are defined in this API:
-- [//](#//)
+- [/](#/)
 
-## `//` (target lambda → [get-apps](#get-apps))
+## `/` (target lambda → [get-apps](#get-apps)) <a name="/"></a>
 
 Supported methods:
 - [GET](#GET)
@@ -119,7 +119,7 @@ No Body found for this method...
 _Example request:_
 
 ```HTTP
-GET //
+GET /
 ```
 
 # API resources
@@ -142,24 +142,11 @@ See [configuration file](./serverless.yml) for more details.
 
 ### Description
 
-{{>description}}
+No Description found for this layer...
 
 ### Dependencies
 
-- `aws-sdk` (local utility)
-- `base64-js` (local utility)
-- `buffer` (local utility)
-- `events` (local utility)
-- `ieee754` (local utility)
-- `isarray` (local utility)
-- `jmespath` (local utility)
-- `punycode` (local utility)
-- `querystring` (local utility)
-- `sax` (local utility)
-- `url` (local utility)
-- `uuid` (local utility)
-- `xml2js` (local utility)
-- `xmlbuilder` (local utility)
+No NPM packages or local utilities found for this layer...
 
 See [configuration file](./serverless.yml) for more details.
 
