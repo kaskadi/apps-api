@@ -73,7 +73,7 @@ See [configuration file](./serverless.yml) for more details.
 
 ### Description
 
-No description found for this layer.
+Layer for apps-api
 
 ### Dependencies
 
