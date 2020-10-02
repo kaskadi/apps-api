@@ -12,4 +12,4 @@ events:
       path: /
       cors: true
       kaskadi-docs:
-        description: lists all applications available for the Kaskadi project
+        description: This endpoint lists all applications available for the Kaskadi project.
