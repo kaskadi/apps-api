@@ -11,3 +11,5 @@ events:
       method: get
       path: /
       cors: true
+      kaskadi-docs:
+        description: lists all applications available for the Kaskadi project
