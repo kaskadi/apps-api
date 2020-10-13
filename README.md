@@ -68,56 +68,56 @@ _Response:_
 
 ```HTTP
 Status code:
-200
+  200
 
 Headers:
-Access-Control-Allow-Origin: *
+  Access-Control-Allow-Origin: *
 
 Body:
-[
-  {
-    "listed": true,
-    "title": {
-      "en": "Accounting",
-      "de": "Buchhaltung",
-      "fr": "Comptabilité"
+  [
+    {
+      "listed": true,
+      "title": {
+        "en": "Accounting",
+        "de": "Buchhaltung",
+        "fr": "Comptabilité"
+      },
+      "section": "finance",
+      "main": "kaskadi-accounting.js",
+      "description": {
+        "en": "Accounting app",
+        "de": "Buchhaltung",
+        "fr": "Application pour la comptabilité"
+      },
+      "routes": [
+        {
+          "path": "/finance/accounting",
+          "appPath": "/modules/@kaskadi/kaskadi-apps/kaskadi-accounting/kaskadi-accounting.js"
+        }
+      ]
     },
-    "section": "finance",
-    "main": "kaskadi-accounting.js",
-    "description": {
-      "en": "Accounting app",
-      "de": "Buchhaltung",
-      "fr": "Application pour la comptabilité"
-    },
-    "routes": [
-      {
-        "path": "/finance/accounting",
-        "appPath": "/modules/@kaskadi/kaskadi-apps/kaskadi-accounting/kaskadi-accounting.js"
-      }
-    ]
-  },
-  {
-    "listed": false,
-    "title": {
-      "en": "APP-TITLE-ENGLISH",
-      "de": "APP-TITLE-GERMAN",
-      "fr": "APP-TITLE-FRENCH"
-    },
-    "section": "",
-    "main": "kaskadi-dashboard.js",
-    "description": {
-      "en": "APP-DESCRIPTION-ENGLISH",
-      "de": "APP-DESCRIPTION-GERMAN",
-      "fr": "APP-DESCRIPTION-FRENCH"
-    },
-    "routes": [
-      {
-        "path": "/",
-        "appPath": "/modules/@kaskadi/kaskadi-apps/kaskadi-dashboard/kaskadi-dashboard.js"
-      }
-    ]
-  }
-]
+    {
+      "listed": false,
+      "title": {
+        "en": "APP-TITLE-ENGLISH",
+        "de": "APP-TITLE-GERMAN",
+        "fr": "APP-TITLE-FRENCH"
+      },
+      "section": "",
+      "main": "kaskadi-dashboard.js",
+      "description": {
+        "en": "APP-DESCRIPTION-ENGLISH",
+        "de": "APP-DESCRIPTION-GERMAN",
+        "fr": "APP-DESCRIPTION-FRENCH"
+      },
+      "routes": [
+        {
+          "path": "/",
+          "appPath": "/modules/@kaskadi/kaskadi-apps/kaskadi-dashboard/kaskadi-dashboard.js"
+        }
+      ]
+    }
+  ]
 ```
 </details>
 
