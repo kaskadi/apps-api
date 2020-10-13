@@ -25,19 +25,25 @@
 <!-- automatically generated documentation will be placed in here -->
 # API endpoints
 
+The origin and root path for this API is: `https://api.klimapartner.net/apps`
+
 The following endpoints are defined in this API:
 - [/](#/)
 
-## `/` (target lambda → [get-apps](#get-apps)) <a name="/"></a>
+## `/` <a name="/"></a>
 
 Supported methods:
-- [GET](#GET)
+- [GET](#/-GET)
 
-### `GET`
+### `GET` (target lambda → [get-apps](#get-apps)) <a name="/-GET"></a>
 
 **Description:**
 
 This endpoint lists all applications available for the Kaskadi project.
+
+**Authorization:**
+
+No authorizer found for this method.
 
 **Query string parameters:**
 
@@ -47,11 +53,73 @@ No query string parameters found for this method.
 
 No body found for this method.
 
-_Example request:_
+**Examples:**
+
+<details>
+<summary>Example #1</summary>
+
+_Request:_
 
 ```HTTP
-GET /
+GET https://api.klimapartner.net/apps/
 ```
+
+_Response:_
+
+```HTTP
+Status code:
+200
+
+Headers:
+Access-Control-Allow-Origin: *
+
+Body:
+[
+  {
+    "listed": true,
+    "title": {
+      "en": "Accounting",
+      "de": "Buchhaltung",
+      "fr": "Comptabilité"
+    },
+    "section": "finance",
+    "main": "kaskadi-accounting.js",
+    "description": {
+      "en": "Accounting app",
+      "de": "Buchhaltung",
+      "fr": "Application pour la comptabilité"
+    },
+    "routes": [
+      {
+        "path": "/finance/accounting",
+        "appPath": "/modules/@kaskadi/kaskadi-apps/kaskadi-accounting/kaskadi-accounting.js"
+      }
+    ]
+  },
+  {
+    "listed": false,
+    "title": {
+      "en": "APP-TITLE-ENGLISH",
+      "de": "APP-TITLE-GERMAN",
+      "fr": "APP-TITLE-FRENCH"
+    },
+    "section": "",
+    "main": "kaskadi-dashboard.js",
+    "description": {
+      "en": "APP-DESCRIPTION-ENGLISH",
+      "de": "APP-DESCRIPTION-GERMAN",
+      "fr": "APP-DESCRIPTION-FRENCH"
+    },
+    "routes": [
+      {
+        "path": "/",
+        "appPath": "/modules/@kaskadi/kaskadi-apps/kaskadi-dashboard/kaskadi-dashboard.js"
+      }
+    ]
+  }
+]
+```
+</details>
 
 # API resources
 
@@ -77,7 +145,7 @@ Layer for apps-api
 
 ### Dependencies
 
-- `aws-sdk`, version: `^2.765.0` ([see on NPM](https://www.npmjs.com/package/aws-sdk))
+- `aws-sdk`, version: `2.765.0` ([see on NPM](https://www.npmjs.com/package/aws-sdk))
 
 See [configuration file](./serverless.yml) for more details.
 
