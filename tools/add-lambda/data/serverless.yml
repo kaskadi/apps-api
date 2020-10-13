@@ -1,5 +1,6 @@
 handler: lambdas/{{name}}/{{name}}.handler
 name: {{name}}
+# customize as needed to connect your lambda function to layers
 layers:
   - { Ref: ApiLayerLambdaLayer }
 package:
@@ -29,3 +30,21 @@ events:
           - key: param2
             description: second body param
             default: true
+        # this field allows you to define a set of request/response examples to display in the documentation
+        examples:
+          - request:
+              queryStringParameters:
+                key1: hello
+                key2: test
+              body:
+                param1: does not make sense in GET
+                param2: but this is a test
+              headers:
+                'Content-Type': 'application/json'
+            response:
+              body:
+                resParam1: hello
+                resParam2: test
+              statusCode: 200
+              headers:
+                'x-kaskadi-data': some data
