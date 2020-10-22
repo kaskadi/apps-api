@@ -132,9 +132,9 @@ The following layers are used in this API:
 
 ## get-apps <a name="get-apps"></a>
 
-|   Name   | Sources                | Timeout |                  Handler                  | Layers                                              |
-| :------: | :--------------------- | :-----: | :---------------------------------------: | :-------------------------------------------------- |
-| get-apps | <ul><li>HTTP</li></ul> | default | [handler](./lambdas/get-apps/get-apps.js) | <ul><li>[apps-api-layer](#apps-api-layer)</li></ul> |
+|   Name   | Sources                      | Timeout |                  Handler                  | Layers                                              |
+| :------: | :--------------------------- | :-----: | :---------------------------------------: | :-------------------------------------------------- |
+| get-apps | <ul><li>HTTP (GET)</li></ul> | default | [handler](./lambdas/get-apps/get-apps.js) | <ul><li>[apps-api-layer](#apps-api-layer)</li></ul> |
 
 See [configuration file](./serverless.yml) for more details.
 
